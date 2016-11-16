@@ -1,0 +1,122 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>전자신문1</title>
+   <style>
+
+    h2,ul,p{margin: 0; padding: 0;}
+
+   .guide_line{
+     outline:1px #F00 solid;}
+
+   .wrapper{
+     width:900px; height:540px;
+     margin:0 auto;}    /*top right bottm left*/
+
+   .heading{
+     height:110px;
+     margin:0 30px;}
+
+   .contents{
+      height:380px;
+      margin:10px 30px 0px;}
+
+   .contents>.left{
+     border:1px #F00 solid;
+     width:513px; height:100%; /*신문을보면 왼쪽콘텐츠내용이 전체내용의 하트값을 넘지않음 */
+     float:left;}
+
+    .contents>.left .up{
+      border:1px #F00 solid;
+      height:50%;}
+
+    .contents>.left .down1{
+      border:1px #F00 solid;
+      width:162px; height:49%;
+      float: left;}
+
+    .contents>.left .down2{
+      border:1px #F00 solid;
+      width:351px; height:49%;
+      margin-left:162px;}
+
+    .contents>.right{
+      border:1px #F00 solid;
+      height:100%;
+      margin-left:523px;}
+
+    .contents>.right .up{
+      border:1px #F00 solid;
+      height:50%;}
+
+    .contents>.right .down{
+      border:1px #F00 solid;
+      height:49%;}
+
+     a{text-decoration: none; color:#E01B5C}
+
+     .article{ /*신문기사*/
+        border:1px #00F solid;
+        width:511px; height:130px;} /*신문기사크기*/
+
+      .thumbnail{               /*보여지는 영역에만 보여지게 */
+        width:160px; height:94px; overflow:hidden; Float:left;}
+
+      .thumbnail img{
+        width:100%;} /*부모의 width값과 동일하게 보여주겠다 heigt기제안하면 부모값따라감*/
+
+      .headline p{
+      margin-left:170px;
+      color:#7a7a7a;
+      font-size:12px;
+      font-family: Gulim,"굴림";
+      line-height:18px;
+      }
+
+      .headline ul,li{
+       color:#000;
+       font-size:12px;
+       line-height:18px;
+       
+
+      }
+
+
+
+
+   </style>
+ </head>
+
+ <body>
+   <div class="wrapper guide_line">
+     <div class="heading guide_line"></div>
+     <div class="contents guide_line">
+       <div class="left">
+         <div class="up">
+           <div class="article">
+             <h2><a href="">SKT·BMW,세계 최초 5G 커넥티드가 시연</a></h2>
+             <div class="thumbnail">
+               <img src=http://static.naver.net/newsstand/2016/1116/etnews/174054/001.jpg alt="">
+             </div>
+             <div class="headline">
+             <p>벤츠와 KT가 새해 상반기부터 교통 사고 등 긴급 상황 발생 때 차량 위치 정보를 파악, 구조 기관에 연결하고 주차 위치 확인을 하는 `커넥티드카` 서비스를 제공한다....</p>
+
+              <ul>
+                <li>SK텔레콤-BMW코리아 `세계최초 5G 커넥티드카` 시동 걸었</li>
+                <li>[이슈분석]커넥티드카 `가속 중`</li>
+              </ul>
+             </div>
+           </div> <!--아티클:신문글기사-->
+         </div>
+         <div class="down1">dd</div>
+         <div class="down2"></div>
+       </div>
+       <div class="right">
+         <div class="up"></div>
+         <div class="down"></div>
+       </div>
+     </div>
+   </div>
+ </body>
+ </html>
