@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>신문레이아웃연습</title>
+   <style>
+   .wrapper{
+     width:900px;
+     height:540px;
+     margin: 0 auto; /*여기서 마진을 주면 위에 바디 부모의 크기를 따라가겠다 */
+     outline:1px #F00 solid;} /*아웃라인이라고 보더와 다른것 , 보더값까지 계산해야하는데 아웃라인은 계산안함*/
+
+   .heading{
+     height:110px; /*여기서 width 값을 주지않은 이윤 위의 크기와 동일하기때문 */
+     margin:0 30px; /*top right bottom left 이니 0 30 0 30*/
+     outline:1px #F00 solid;}
+
+   .contents{
+     height:380px;
+     margin:10px 30px 0;
+     outline:1px #F00 solid;}
+
+    .contents>.left{      /*contents>.1eft-> contents 바로 다음에! 있는 left 라는의미!!*/
+      width:513px;
+      height:100%; /* 100% 자기 위에있는 부모랑 height가 같겠다는 의미 */
+      float:left; /*float 를 쓰니 컨텐츠크기만큼만 들고 자기는 왼쪽으로 이동하겠다 float는 붕뜬다*/
+      outline:1px #00F solid;}
+
+    .contents>.left .up{ /*contents>.left .up-> contents 바로다음에 있는 left안에!! 속해있는 up라는의미! */
+      height:50%; /*contents보다는 50% 작아야함.*/
+      outline:1px #F00 solid;}
+
+    .contents>.left .down{
+      height:50%;
+      outline:1px #00F solid;}
+
+    .contents>.right{
+      height:100%;
+      margin-left:524px;/* 옆에꺼 width 513크기 만큼 더떨어졌다는 의미 하지만 좀더 떨어져야하기때문에 524*/
+      outline:1px #F00 solid;
+      background: #CCC;}
+
+    .contents>.right .up{
+      height:50%;
+      outline:1px #00F solid;}
+
+    .contents>.right .down{
+      height:50%;
+      outline:1px #F00 solid;}
+
+   </style>
+
+ </head>
+ <body>
+   <div class="wrapper">
+     <div class="heading"></div>
+     <div class="contents"> <!--컨테이너 안에 left와 right 들어있다. -->
+       <div class="left"> <!--left안에 up down -->
+         <div class="up"></div>
+         <div class="down"></div>
+       </div>
+
+       <div class="right"> <!--right안에 up down -->
+         <div class="up"></div>
+         <div class="down"></div>
+       </div>
+     </div>
+   </div>
+
+ </body>
+ </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    .box{
+      width:300px;
+      height:300px;
+      border:1px #F00 solid;
+      overflow: scroll;
+    }
+    .subbox{
+      width:500px;
+      height:500px;
+      background-color:rgba(255,0,0,.3)
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <div class="subbox">sfsdfdsfffsdf</div>
+  </div>
+
+</body>
+</html>
+
+
+<!-- 플롯설명
+1.공중에 붕뜨다
+2.플롯이 선인된 엘리먼트는 컨텐츠가 피해간다
+3.플룻이 선언된 엘리먼트는 먼저작성된 엘리먼트보다 위로 뜰수 없다
+
+width:auto
+height:auto
+
+overflow:hidden - 넘어가면 안보임 (보여지는 영역에만 보여지고 ) 오버플로우 기본상태
+                     visible- 넘어가도보임 (보여지는 영역을 넘어서도 보여짐)
+                     scroll - 양옆에 스크롤바가 생겨서 보여주는 형식 (보여지는 영역에서 스크롤바가생김)
+                     overflow-y - 세로로 스크롤바  -->

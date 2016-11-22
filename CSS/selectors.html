@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>selectors</title>
+
+  <style>
+  /*div{border:1px #F00 solid;} div안에 스타일을 준다*/
+  /*div,ul,li{border:1px #F00 solid;} 스타일 안에 div,ul,li 3가지를 한번에 스타일을 빠르고 간단하게 스타일을 준다. */
+  /*.menu{border:1px #F00 solid} (.-클레스) 메뉴라는 클레스 안에 스타일을 준다 */
+  /*#unit1{border:1px #F00 solid} (#)아이디를 가는 요소에게 스타일을 준다 */
+  /*.menu ul{border:1px #F00 solid;} 메뉴안에있는 모든 ul!!!들은 다 스타일을 준다*/
+  /*.menu li{border:1px #F00 solid;} 메뉴안에있는 모든 li!!!들은 다 스타일을 준다*/
+  /*.menu>ul{border:1px #F00 solid;} 메뉴안에 바로밑에있는 ul의 스타일을 준다*/
+  /*.menu>ul>li{border:1px #F00 solid;} 메뉴안에 ul안에 바로밑에있는 li들만 스타일을 준다*/
+  /*.menu .testul>li{border:1px #F00 solid;} 메뉴 클레스 안에 testul클레스를 찾아 그 바로밑 li들에게 스타일을 준다*/
+  /*.menu ul.subul {border:1px #F00 solid;} 메뉴 클레스 안에 ul 안에 subul클레스를 찾아 스타일을 준다 */
+  /*ul.subul.list-item{border:1px #F00 solid;} ul클레스 안에 subul클레스안에 list-item 클레스 안에 스타일을 준다 */
+  /*.menu>ul>li:first-child {border:1px #F00 solid} 메뉴클레스 바로밑에 있는 ul 바로밑에 있는 li안을 찾아 퍼스트 차일지 스타일을 준다*/
+  /*.menu li li:first-child{border:1px #F00 solid} 메뉴클레스 안에 li 안에있는 li를 찾아 퍼스트 차일지 스타일을 준다 익스플로러 호환버전:7,8,9*/
+  /*.menu li li:last-child{border:1px #F00 solid} 메뉴클레스 안에 li안에있는 li를 찾아 로스트 차일지 스타일을 준다 익스플로러 호환버전:8,9*/
+  /*li input{border:1px #F00 solid} li클레스 안에 인풋에게 스타일을준다*/
+  /*li input[type="button"]{border:1px #F00 solid} li클레스 안에 인풋안에 있는 버튼에게만 스타일을 준다*/
+  /*a[href="라이코스"]{border:1px #F00 solid} a랭크 클레스안에 라이코스 라는 텍스트만 스타일을 준다*/
+    /*
+    ^ = 시작하면
+    * = 포함되어있으면
+    $ = 끝나면
+     */
+  /*
+  a[href*="이코"]{border:1px #F00 solid} 이코라는 말이 포함되어있으면 스타일을준다
+  a[href^="라이"]{border:1px #F00 solid} 라이라는 글자로 시작하는것에 스타일을준다
+  a[href$="코스"]{border:1px #F00 solid} 코스라는 말이 끝나는곳에 스타일을준다
+  */
+  /*.unit+li{border:1px #F00 solid} 유닛에 다음 선택자에 스타일을 준다*/
+  /*.unit+li+li{border:1px #F00 solid} 유닛에 다음다음 선택자에 스타일을 준다*/
+  /*.unit~p{border:1px #F00 solid} 유닛이라는 클레스를 가지고 있는 다음!! p들에게 스타일을 준다*/
+  </style>
+
+
+
+
+</head>
+<body>
+
+
+
+  <p>text</p>
+  <p>text</p>
+  <p>text</p>
+  <p class="unit"></p>
+  <p>text</p>
+  <p>text</p>
+  <p>text</p>
+  <div>text</div>
+  <p>text</p>
+  <p>text</p>
+
+
+
+<div class="menu">
+  <ul class="first-ul">
+    <li>text1
+      <ul class="subul">
+        <li>text1-1</li>
+        <li>text2-2</li>
+        <li class="unit">unit</li>
+        <li>text1-1</li>
+        <li>text2-2</li>
+        <li>text3-3</li>
+      </ul>
+    </li>
+    <li>text2
+      <ul class="subul list-item">
+        <li><input type="text"></li>
+        <li><input type="button"></li>
+        <li><a href="네이버">text3-3</a></li>
+      </ul>
+    </li>
+    <li><a href="라이코스">text3</a>
+      <ul class="testul">
+        <li><input type="text"></li>
+        <li id="unit">text2-2</li>
+        <li>text3-3
+          <ul class="testul1">
+            <li><input type="text1"></li>
+            <li id="unit1">text2-2</li>
+            <li>text3-3</li>
+            <li><input type="text1"></li>
+            <li id="unit2">text2-2</li>
+            <li>text3-3</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

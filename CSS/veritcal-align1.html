@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  .div{border:1px #F00 solid; height:100px; vertical-align:middle; } /* 블록요소 니까 버티컬이먹지않음 */
+   /* 버티컬은
+      인라인일 경우 : 헤잇트 값이 아닌 라인헤잇값 기준으로!!
+      인라인 블럭은 : 가장큰 박스 기준으로 (인라인 블럭이니 블럭요소에 해당)
+      디스플레일 경우 : 디스플레이에 성형에 따라 버티컬이 달라진다.
+      위 , 아래 이다 px로도 가능하다 */
+  .div span{ vertical-align:top;}
+
+  span{line-height: 100px;} /*span 한테만 행간(간격)을준다*/
+
+  .a{vertical-align: bottom;}
+
+  input{vertical-align:middle;} /*인풋에 버튼타입에 대한 버티컬 얼라인 값조정*/
+
+  ul{margin:0 ; padding:0; }
+  li{width:200px; border:1px #F00 solid; display: inline-block; vertical-align: middle}
+
+  .aaa{width:100px; height:200px; border:3px #F00 solid; display: table;}
+  .bbb{border:1px #F00 solid;display: table-cell; vertical-align: middle; text-align:center}
+  </style>
+</head>
+<body>
+
+    <div class="aaa">
+        <div class="bbb">sdfsdfsdfs dfsdfs dfsgs dfgsd fsdgsdfsdf</div>
+    </div>
+
+  <ul>
+    <li style="height:200px;"></li> <!--바디안에 스타일을 줌 높이값을 -->
+    <li style="height:100px;"></li>
+    <li style="height:50px;"></li>
+    <li style="height:100px;"></li>
+    <li style="height:200px;"></li>
+  </ul>
+
+  <input type="checkbox">
+  <span>아이디기억하기</span>
+  <div class="div">text
+  <span>sfsfsfsfsdfsdf</span> <!--인라인이니 버티컬이 먹는거-->
+  </div>
+  <span>text text test</span>
+  <span class="a">abcd</span>
+  <br/>
+</body>
+</html>

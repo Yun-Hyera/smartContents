@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <style>
+   .foo_1{
+     border:1px #F00 solid; float:left;
+     width:300px; height:300px;
+   }
+
+   .foo_2{
+     border:1px #F00 solid;
+     width:400px; height:400px;
+     overflow:hidden; /*오버플로어 히든을 해주면은 겹쳐있던것이 옆으로 띄어진것같은
+     효과를 볼수있는데 이건 실제적으로 띄어진게아닌 보여지는 부분에서 안보이는 영역이 된것뿐이다*/
+   }
+
+ul{margin:0; padding:0; list-style: none;}
+   .grid-list{
+     border:1px #F00 solid;
+     width:540px;}
+
+     .grid-list ul{
+       border:1px #F00 solid;
+       width:110%;
+     }
+
+     .gtid-list li{
+       border:1px #F00 solid;
+       width:98px; height:100px;
+     }
+   </style>
+ </head>
+ <body>
+   <h1>float,overflow</h1>
+ <div class="foo_1"></div>
+ <div class="foo_2"></div>
+
+
+<h1>grid list</h1>
+<div class="grid-list">
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
+ </body>
+ </html>

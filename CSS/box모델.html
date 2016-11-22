@@ -31,19 +31,20 @@
   border-color
 */
 
-
   *{margin:0;padding:0;
   list-style: none;}
 
 
-  #box {height:100px;/*컨텐츠만큼*/
-        border:1px red solid;}
+  #box {height:100px;/*컨텐츠만큼*/ /*width값을 따로 주지않았기에 body 크기 만큼*/
+      border:1px red solid;
+      background-color:blue}
 
 
-  #box{width:200px;
+  #box1{width:200px; height:200px;
        margin-left:auto;
        margin-right:auto;
-       border:1px #F00 solid;}
+       border:1px #F00 solid;
+       background-color:yellow}
 
   body{margin:0;} -
 
@@ -56,7 +57,7 @@
            width:auto; /*부모만큼*/
            margin: 10px}
 
-  #children{height:200px;
+  #children{ width:100%; height:200px; /*부모만큼100%*/
             background:#00F;
             border:1px #F00 solid}
 </style>
@@ -64,9 +65,10 @@
 
 <body>
 <div id="box"> <!--얜 그냥 블록요소 -->
-
 <div id="children"></div>
 </div>
+
+<div id="box1"></div>
 
 <div id="menu">
   <ul>
