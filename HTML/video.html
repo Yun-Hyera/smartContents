@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;} /*빈공간 남겨두지 않고 꽉차게*/
+         body,html{height:100%;}
+        .intro{position:relative; boder:1px #F00 solid; height:100%; overflow:hidden;}
+        .wrap{position:absolute; top:0; left:0; border:1px #00F solid; width:100%;
+            color:#FFF;
+            text-align:center; /*글자를 가운데로*/
+            display:table;
+            height:100%;}
+            
+        h1{border:1px #F00 solid;
+           display:table-cell;
+           vertical-align:middle;}
+            
+            
+        .box{position:absolute; width:500px; height:500px; background-color:rgba(0,0,0,.8);
+            right:-250px;
+            bottom:-250px;
+            transform:rotate(45deg);} /*회전
+            이건 옆에 회색갈 박스*/ 
+            
+            
+        /*video{position:relative; right:50%;}*/
+
+    </style>
+</head>
+<body><div class="intro">
+    <video width="100%" autoplay loop>
+      <source src="../video/Ice.mp4" type="video/mp4">
+    </video>
+    <div class="box"></div>
+    <div class="wrap">
+        <h1>Hello Ice<br/>sweet</h1>
+    </div>
+    </div>
+</body>
+</html>
