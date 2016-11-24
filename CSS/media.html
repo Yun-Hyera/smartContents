@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+
+/*백그라운드 url*/
+
+    /*pc*/
+    /*@media screen and (min-width:1024px) {
+        body{background:url(../img/b.jpg) no-repeat}}
+
+
+    /*tablet*/
+    /*@media screen and (max-width:1024px) {
+        body{background-color:#F00;}}*/
+
+
+    /*mobile*/
+    /*@media screen and (max-width:480px) {
+        body{background-color:#FF0;} }*/
+
+      /*pc*/
+     body{background-color:#FFF;} /*기본이니 없어도됨*/
+    .box{width:500px; height:500px; border:2px #00F solid; margin:0 auto; transition:1s;}
+
+     /*tablet*/
+     @media screen and (max-width:1024px)  /* 미디어 :  pc , tablet , moblie 어느 것으로 보든 해상도가 깨지지않게 해주는것 반은형 웹 */
+     {body{background-color:#F00;}
+    .box{width:300px; height:300px;}
+     }
+
+    /*mobile*/
+    @media screen and (max-width:480px)
+    {body{background-color:#FF0;}
+   .box{width:200px; height:200px;}
+    }
+
+   </style>
+
+</head>
+<body>
+
+<div class="box"></div>
+
+</body>
+</html>
+
+<!--
+미디어 에서만 최소값과 최대값 둘의  의미가 바뀌게 됨
+
+max - (예)1000 이하가 됐을때 이미지가 나오게 하는것
+
+min - (예)1000 이상이 됐을때 이미지가 나오게 하는것 -->
+
+
+<!-- ★요새는 hdpi뷰 기준이지 px기준이 절때 아님!!!★ -->
