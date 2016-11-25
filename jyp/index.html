@@ -5,12 +5,28 @@
     <meta charset="UTF-8">
     <title>jyp</title>
     <link rel="stylesheet" href="css/import.css" type="text/css" />
+    <link rel="stylesheet" href="font/Flaticon.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.menu').click(function(){
+          $(this).next('ul').slideToggle(1000);
+        })
+      })
+      </script>
+      <style type="text/css">
+          .flaticon-twitter-black-shape:before {
+              font-size:50px;
+              color:#F00;
+            }
+</style>
 </head>
 
 <body>
     <header>
         <h1><a href="index.html">원더걸스</a></h1>
         <nav>
+            <a href="javascript:void(0);" class="menu">Main Menu</a>
             <ul>
                 <li><a href="#">PROFILE</a></li>
                 <li><a href="#">DISCOGRAPHY</a></li>
@@ -21,6 +37,13 @@
             </ul>
         </nav>
     </header>
+    <section>
+        <div class="biglogo"></div>
+    <i class="flaticon-twitter-black-shape"></i>
+
+    </section>
+
+
 
 
 </body>
