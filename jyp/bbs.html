@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jyp</title>
+    <link rel="stylesheet" href="css/import.css" type="text/css" />
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.menu').click(function(){
+          $(this).next('ul').slideToggle(1000);
+        })
+      })
+    </script>
+    <style type="text/css">
+        .flaticon-facebook-logo-button:before{
+            font-size:100px;
+            color:#F00;
+
+        }
+    </style>
+</head>
+
+<body class="nonebg">
+    <header>
+        <h1><a href="index.html">원더걸스</a></h1>
+        <nav>
+            <a href="javascript:void(0);" class="menu">Main Menu</a>
+            <ul>
+                <li><a href="#">PROFILE</a></li>
+                <li><a href="#">DISCOGRAPHY</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">VIDEO</a></li>
+                <li><a href="#">NOTICE</a></li>
+                <li><a href="#">SCHEDULE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="notice">
+      <div class="title">
+        <h2>notice</h2>
+      </div>
+      <div class="list">
+        <table>
+          <colgroup>
+            <col style="width:50px; "/> <!--왼쪽으로-->
+            <col />
+            <col style="width:100px; "/> <!--오른쪽으로-->
+          </colgroup>
+          <thead> <!-- thead 부분  -->
+            <tr>
+              <th>number</th>
+              <th>subject</th>
+              <th>date</th>
+            </tr>
+          </thead>
+          <tbody> <!-- hbody 부분-->
+            <tr>
+              <td>46</td>
+              <td>
+                <span class="elip"> <!--모든글들에 스판감싸줘야함-->
+                안녕하세요, JYP Entertainment 입니다. <!-- 스판에 클레스 주고 -->
+                show me the money
+                show me the money
+                show me the money
+                show me the money
+                show me the money
+                show me the money
+                show me the money
+              </span>
+              </td>
+              <td>2016.10.14</td>
+            </tr>
+            <tr>
+              <td colspan="3"> <!--td안에는 div도 p도 br도 가능하다 -->
+                <div>
+안녕하세요, JYP Entertainment 입니다.
+10월 13일 태국 푸미폰 국왕의 서거로 인해,
+태국 정부는 공식적으로 1년 간의 애도기간을 선포했고,
+이와 함께 30일간 모든 엔터테인먼트 관련 활동은 중지되었습니다.
+
+이에, 11월 5일과 6일 예정되어있던
+'2016 JYP Nation Mix & Match in Bangkok'은 취소되었음을 알려드립니다.
+태국 국민분들께 다시 한번 깊은 애도의 뜻을 전해 드립니다.
+
+티켓 환불 관련 안내는 태국 현지 공연 협력 업체의 SNS를 통해 추후 공지될 예정입니다
+
+감사합니다.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>show me the money</td>
+              <td>2016.12.01</td>
+            </tr>
+            <tr> <!--셀을합치겠다 밑에 td들을 지우기-->
+              <td colspan="3">
+                <div>ddddddddddd</div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>show me the money</td>
+              <td>2016.12.01</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>show me the money</td>
+              <td>2016.12.01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+
+</body>
+
+</html>
