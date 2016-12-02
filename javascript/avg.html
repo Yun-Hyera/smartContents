@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<script type="text/javascript">
+
+//confirm : 흔히 선택창이라고 부르며, [확인] 버튼과 [취소] 버튼이 생성되는 메시지 박스
+//alert와 마찬가지로 브라우저 종류, 버전에 따라 팝업창의 형태가 다르게 보일 수 있으며, if,else 함수와 함께 쓰인다.
+// ; - 닫는것
+
+//unshift : 언쉬프트(역순으로 집어넣다),내장함수 해당하는 저장공간에 넣어주는 역할
+//push : 푸쉬 내가입력한 순서대로 나오는거
+
+var nameArr = []; //어레이들은 - 저장공간일뿐이다
+var scoreArr = [];
+
+var max_user = prompt('학생의 수를 입력해주세요'); // 학생수를 입력해주는 창
+var check = confirm(max_user + '인원이 맞습니까?') // 입력한 학생수가 맞냐고 물어보는 선택창
+// 임의적으로 만든 각 학생수 의 이름과 점수를 만드는 변수 생선과정
+if(check){ //★if는 트루값만 콘솔에서 나온다★ //예,아니요 라는 변수를 만들어주기위해 생성했다.
+  for(var i = 0;  i < max_user;  i++){ //max_user 임의적으로 학생수를 정한만큼 돌겠다. //for은 반복문 여기서 for을 써주는경우는 주어진 학생인원수 이름과 점수가 정해진 학생인원수 만큼 계속 반복해야하기 때문에
+  var name = prompt('이름을 입력해주세요'); // 입력한 학생수가 맞다고 확인을 누르면 이름을 입력해주세요 라는 확인창이 뜬다. 한 학생의 이름을 입력하면됨.
+  var score = prompt('점수를입력하세요'); // 한 학생의 이름을 입력한후 그 학생의 점수가 몇점이냐 묻는 확인창이 뜬다.
+  nameArr.unshift(name); // 임의적으로 정해준 각 학생들의 이름을 역순으로 nameArr저장공간에 넣어주는 변수
+  scoreArr.unshift(score); // 임의적으로 정해준 각 학생들의 점수를 역순으로 scoreArr저장공간에 넣어주는 변수
+}
+document.write(nameArr + "<br / >" + scoreArr) // 도큐먼트를 이용해 화면창에 각 주어진 학생의 이름과 점수를 보여주는 변수.
+// 임의적으로 각각 학생들의 이름과 점수의 변수를 만들고 마지막으로 입력정보를 확인하는 변수 생성과정
+var nexts = confirm('입력정보가 맞습니까?'); // 입력한 정보들이 맞는 물어보는 선택창.
+  if(nexts){ //예,아니요를 묻기 위해 if를 사용
+    console.log('학생 전체 점수를 산출합니다.')
+    var score = 0; //토탈 점수를 0을 주는 이유는 임의적으로 주어진 각 학생들의 값을 산출하기위해 숫자가 연산이 가능하기 때문에 숫자를 안쓰면 언디파인트가 안된다.
+    for(var i = 0; i < scoreArr.length; i++){// 임의적으로 주어진 학생들의 저장된 점수를 합산하여 산출하는 변수.
+      score += Number(scoreArr[i]); // 0 +=
+    }
+    console.log("total" + score)  //total:토달
+
+
+
+
+  }else if(!nexts){ // 펄스니 아니라는 결과가 나와 프로그램을 종료하겠다는 변수.
+    alert('프로그램을 종료합니다')
+  }
+
+  console.log(nameArr,scoreArr) //처음썻으니까 첫번째칸
+
+}else if(!check){
+  console.log('re');
+}
+
+/*if(check){
+  console.log('gogogo');  // 트루면 gogogo
+}else if(!check){ // (!)펄스면은 re
+  console.log('re');
+} 맞는 확인하는 절차 */
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
