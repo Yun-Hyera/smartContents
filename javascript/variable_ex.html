@@ -1,0 +1,38 @@
+<script type="text/javascript">
+//상황1
+//prompt("너이름이뭐니?");
+//프롬프트 - 내장함수 , 입력창을 나오게함 , 글자를쓸수있음★★★
+
+//상황2
+//var name = prompt("너이름이뭐니?");
+//var을 붙혀주면 팝업창에 이름을 썻을때 콘솔창에 들어가면 쓴 이름이 나온다 ★
+//document.write("Name:"+name) //문자와 변수를 더해준것
+//도큐먼트는 바디같은 존재로써 값이 화면에 출력된다 그러니 Name는 문자라 그대로 출력되고 +name은 변수값이라 팝업창에 내가쓴 값이 나온다.
+//예) Name:윤
+
+//상황3
+var name = prompt("너이름이뭐니?");
+var year = prompt("몇년생이야?");
+
+year = Number(year);
+// 대신 year = Number(year); //넘버쓸때 앞에만 대문자로 써주기 2
+// 이 변수를 써줬을경우는
+// 숫자-스트링이 아닌
+// 숫자-넘버 로 나오게된다
+
+//스트링인지 찾아주는 얘
+console.log("name:"+ typeof(name));
+console.log("year:"+ typeof(year));
+// prompt프롬프트 는 기본적으로 숫자를 집어넣어도 문자로 인식된다 1
+// 문자 - 스트링
+// 숫자 - 스트링  숫자를 집어넣어도 문자로 인식된다
+
+console.log("Name:"+name+"<br/ > year:"+year); //콘솔로 알려줄거임
+
+document.write("Name:"+name+"<br />"+"year:"+(year+1900)); //year:1994
+ // 태그를 "" 감싸주지않으면 언디파인된다. ""넣지않으면 정의되지않은 변수다. ""를  쓰지않을때는 변수로 나온다
+//year = Number(year); 변수를 줬으니 스트링 이아닌 넘버라서
+//내가 몇년생이야 했을때 1994 숫자를 넣을경우 1994+1900 인데 만약에 1900앞에 "" 붙이면 "1900"이면 문자라고 인식해서 화면에 19941900 으로 붙혀서 나오게됨
+//document.write("Name:"+name+"<br />"+"year:"+(year+"1900")); //이 경우임
+
+</script>
